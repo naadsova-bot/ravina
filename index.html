@@ -324,6 +324,7 @@
     .wp-grid--2, .wp-grid--3{grid-template-columns:1fr !important;}
     .wp-hero{grid-template-columns:1fr !important;}
     .h1{font-size:26px !important;}
+    #rotator{font-size:30px !important;}
     .h2{font-size:30px !important;}
     #impacto h2{margin-bottom:48px !important;}
     #impacto-stats{grid-template-columns:repeat(2,1fr) !important;row-gap:40px !important;}
@@ -423,8 +424,8 @@
   <div class="wp-container" style="max-width:760px;text-align:center;padding-top:var(--space-6);padding-bottom:var(--space-7);position:relative;">
 
     <span class="eyebrow" style="justify-content:center;">Team building - Gymkanas productivas – Eventos corporativos en Perú</span>
-    <h1 class="h1" style="font-size:46px;color:var(--carbon);margin:0 auto var(--space-4);min-height:3.4em;max-width:720px;">Eventos corporativos que<br><span class="rotator" id="rotator" style="color:var(--naranja);">fortalecen la cultura</span><br>de tu organización.</h1>
-    <p class="body-lg" style="font-size:24px;line-height:1.5;color:var(--gris);max-width:540px;margin:0 auto var(--space-5);">Diseñamos experiencias que conectan personas, desarrollan el talento y crean equipos que disfrutan trabajar juntos.</p>
+    <h1 class="h1" style="font-size:46px;color:var(--carbon);margin:0 auto var(--space-4);min-height:3.4em;max-width:720px;">Eventos corporativos que<br><span class="rotator" id="rotator" style="color:var(--naranja);font-size:54px;">fortalecen la cultura</span><br>de tu organización.</h1>
+    <p class="body-lg" style="font-size:24px;line-height:1.5;color:var(--gris);max-width:540px;margin:0 auto var(--space-5);">Diseñamos experiencias</p>
     <div style="display:flex;flex-direction:column;align-items:center;gap:var(--space-3);">
       <a href="https://wa.me/51998304278?text=%C2%A1Hola%2C%20Patty%21%20Me%20interesa%20cotizar%20una%20experiencia%20para%20mi%20empresa" target="_blank" rel="noopener" class="btn">Conversemos</a>
       <span class="small" style="color:var(--gris-claro);">+500 empresas han confiado en nosotros</span>
@@ -894,7 +895,7 @@
 
 <script>
   // Título dinámico tipo Notion: rota la frase destacada cada 2 segundos
-  const rotatorPhrases = ['fortalecen la cultura', 'integran a las personas', 'desarrollan el talento', 'conectan al equipo', 'motivan a los colaboradores'];
+  const rotatorPhrases = ['fortalecen la cultura', 'integran a las personas', 'desarrollan el talento', 'conectan al equipo'];
   let rotatorIndex = 0;
   const rotatorEl = document.getElementById('rotator');
 
