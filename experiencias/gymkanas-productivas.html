@@ -379,7 +379,7 @@
       </div>
   </div>
 <div class="wp-container" style="max-width:760px;text-align:center;padding-top:17px;padding-bottom:17px;">
-    <div class="hero-desktop-only" style="margin-bottom:20px;"><div id="hero-logo-row" style="display:inline-flex;align-items:center;gap:22px;background:#FF6A13;padding:14px 34px;border-radius:100px;"></div></div>
+    <div class="hero-desktop-only" style="margin-bottom:20px;"><div id="hero-logo-row" style="display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:24px;background:#FF6A13;padding:16px 40px;border-radius:100px;max-width:calc(100% - 16px);box-sizing:border-box;"></div></div>
     <span class="eyebrow" style="justify-content:center;width:100%;">Gymkanas productivas</span>
     <h1 class="h1" style="font-size:34px;color:var(--carbon);margin:0 0 12px;">Gymkanas productivas</h1>
     <p class="body-lg" style="color:var(--gris);max-width:600px;margin:0 auto;">Impulsa la motivación y el clima laboral con nuestras gymkanas productivas.</p>
@@ -690,7 +690,7 @@
           if(desktopRow){
             var c2=fimgs[i].cloneNode(true);
             c2.removeAttribute('class');
-            c2.style.cssText='height:52px;width:auto;display:inline-block;margin:0 18px;vertical-align:middle;';
+            c2.style.cssText='height:clamp(56px,7.5vw,104px);width:auto;display:inline-block;margin:0 12px;vertical-align:middle;';
             desktopRow.appendChild(c2);
           }
           break;
