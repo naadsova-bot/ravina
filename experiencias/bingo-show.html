@@ -390,6 +390,7 @@
       </div>
   </div>
 <div class="wp-container" style="max-width:760px;text-align:center;padding-top:17px;padding-bottom:17px;">
+    <div class="hero-desktop-only" id="hero-logo-row" style="text-align:center;margin-bottom:20px;"></div>
     <span class="eyebrow" style="justify-content:center;width:100%;">Entretenimiento corporativo</span>
     <h1 class="h1" style="font-size:34px;color:var(--carbon);margin:0 0 12px;">Bingo Show</h1>
     <p class="body-lg" style="color:var(--gris);max-width:600px;margin:0 auto;">Transforma tus celebraciones en espacios de alto engagement con nuestro Bingo Show.</p>
@@ -687,17 +688,30 @@
     start();
   })();
   (function(){
-    var strip=document.getElementById('hero-logo-strip');
-    if(!strip) return;
+    var wanted=['Gymkanas','Bingo Mania','Juegos de Feria'];
     var fimgs=document.querySelectorAll('footer img');
-    function clone(name,op,h){
-      for(var i=0;i<fimgs.length;i++){ if(fimgs[i].alt===name){
-        var c=fimgs[i].cloneNode(true); c.removeAttribute('class');
-        c.style.cssText='height:'+h+'px;width:auto;opacity:'+op+';filter:drop-shadow(0 1px 3px rgba(0,0,0,.4));';
-        strip.appendChild(c); return; }}
-    }
-    ['Gymkanas','Bingo Mania','Juegos de Feria'].forEach(function(n){clone(n,0.9,30);});
-    clone('Ravina',0.55,26);
+    var mobileStrip=document.getElementById('hero-logo-strip');
+    var desktopRow=document.getElementById('hero-logo-row');
+    var mobileAnchor=mobileStrip?mobileStrip.querySelector('img'):null;
+    wanted.forEach(function(name){
+      for(var i=0;i<fimgs.length;i++){
+        if(fimgs[i].alt===name){
+          if(mobileStrip){
+            var c1=fimgs[i].cloneNode(true);
+            c1.removeAttribute('class');
+            c1.style.cssText='height:30px;width:auto;opacity:.9;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4));';
+            mobileStrip.insertBefore(c1, mobileAnchor);
+          }
+          if(desktopRow){
+            var c2=fimgs[i].cloneNode(true);
+            c2.removeAttribute('class');
+            c2.style.cssText='height:36px;width:auto;display:inline-block;margin:0 14px;vertical-align:middle;';
+            desktopRow.appendChild(c2);
+          }
+          break;
+        }
+      }
+    });
   })();
 </script>
 
