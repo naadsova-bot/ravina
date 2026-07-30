@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8743"],
       "port": 8743
+    },
+    {
+      "name": "acortador-links",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/nat/acortador-links", "run", "dev"],
+      "port": 3000
     }
   ]
 }
